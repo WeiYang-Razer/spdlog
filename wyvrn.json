@@ -1,0 +1,28 @@
+{
+  "name": "spdlog",
+  "version": "1.17.0.0",
+  "schemaVersion": 2,
+  "kind": "StaticLib",
+  "description": "Very fast C++ logging library",
+  "dependencies": {
+    "fmt": "^12.0.0.0"
+  },
+  "build": {
+    "system": "cmake",
+    "configs": [
+      "Debug",
+      "Release",
+      "RelWithDebInfo",
+      "MinSizeRel"
+    ],
+    "configure": [
+      "-DSPDLOG_BUILD_TESTS=OFF",
+      "-DSPDLOG_BUILD_EXAMPLE=OFF",
+      "-DSPDLOG_INSTALL=ON",
+      "-DSPDLOG_FMT_EXTERNAL=ON",
+      "-DCMAKE_RELWITHDEBINFO_POSTFIX=rd",
+      "-DCMAKE_MINSIZEREL_POSTFIX=msr"
+    ],
+    "installDir": "install"
+  }
+}

@@ -96,3 +96,10 @@ cmake-build-*/
 /.vs
 /out/build
 /CMakeSettings.json
+
+# wyvrnpm-generated — do not commit
+/build/
+/wyvrn_internal/
+/wyvrn.lock
+/CMakePresets.json
+/CMakeUserPresets.json

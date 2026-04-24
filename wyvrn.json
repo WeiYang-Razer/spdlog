@@ -1,0 +1,26 @@
+{
+  "name": "spdlog",
+  "version": "1.17.0.0",
+  "schemaVersion": 2,
+  "kind": "StaticLib",
+  "description": "TODO: one-line description of spdlog",
+  "dependencies": {
+    "fmt": "latest"
+  },
+  "build": {
+    "system": "cmake",
+    "configs": [
+      "Debug",
+      "Release",
+      "RelWithDebInfo",
+      "MinSizeRel"
+    ],
+    "configure": [
+      "-DSPDLOG_BUILD_TESTS=OFF",
+      "-DSPDLOG_BUILD_EXAMPLE=OFF",
+      "-DSPDLOG_INSTALL=ON",
+      "-DSPDLOG_FMT_EXTERNAL=ON"
+    ],
+    "installDir": "install"
+  }
+}
